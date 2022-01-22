@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_shopify_configuration,access_sh_shopify_configuration,model_sh_shopify_configuration,base.group_user,1,1,1,1
+access_sh_shopify_log,access_sh_shopify_log,model_sh_shopify_log,base.group_user,1,1,1,1
+access_sh_queue,access_sh_queue,model_sh_queue,base.group_user,1,1,1,1
+access_sh_auto_sale_workflow,access_sh_auto_sale_workflow,model_sh_auto_sale_workflow,base.group_user,1,1,1,1
+access_sh_popup_message,access_sh_popup_message,model_sh_popup_message,base.group_user,1,1,1,1

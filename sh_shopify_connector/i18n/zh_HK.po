@@ -1,0 +1,1091 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_shopify_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-26 13:00+0000\n"
+"PO-Revision-Date: 2021-11-26 13:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_export_failure_view
+msgid "<b>Failed To Import</b>"
+msgstr "<b>無法導入</b>"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_export_successfull_view
+msgid "<b>Imported Successfully</b>"
+msgstr "<b>成功導入</b>"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__all_contacts_imported_successfully
+msgid "All Contacts Imported Successfully"
+msgstr "所有聯繫人都成功導入"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__all_orders_imported
+msgid "All Orders Imported"
+msgstr "所有導入訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_api_key
+msgid "Api Key"
+msgstr "API鍵"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_ir_attachment
+msgid "Attachment"
+msgstr "依戀"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__auto_import_contact
+msgid "Auto Import Contacts"
+msgstr "自動導入聯繫人"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__auto_import_draft_orders
+msgid "Auto Import Draft ORders"
+msgstr "自動進口訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__auto_import_orders
+msgid "Auto Import Orders"
+msgstr "自動進口訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__auto_import_products
+msgid "Auto Import Products"
+msgstr "自動進口產品"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_sale_res_config_settings_view_form
+msgid "Auto Sale Workflow Settings"
+msgstr "自動銷售工作流程設置"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.act_window,name:sh_shopify_connector.sh_auto_sale_workflow_action
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_auto_sale_workflow_menu
+msgid "Auto Sales Workflow"
+msgstr "汽車銷售工作流程"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "Auto Schedule"
+msgstr "自動時間表"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sh_auto_sale_workflow
+msgid "Auto Workflow Working"
+msgstr "自動工作流程"
+
+#. module: sh_shopify_connector
+#: model:res.groups,name:sh_shopify_connector.group_auto_sale_workflow
+msgid "Auto sale workflow"
+msgstr "汽車銷售工作流程"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__shopify_cn_number
+msgid "CN Number"
+msgstr "CN號碼"
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/sh_shopify_contacts.py:0
+#, python-format
+msgid "Check Your Credentials and Try Again After Sometime"
+msgstr "檢查您的憑據，並在某個時候再試一次"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_res_company
+msgid "Companies"
+msgstr "公司"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_res_config_settings
+msgid "Config Settings"
+msgstr "配置設置"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_confirm_order
+msgid "Confirm Order"
+msgstr "確認訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_res_partner
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_queue__queue_type__contact
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_contact_queue_search_view
+msgid "Contact"
+msgstr "接觸"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.act_window,name:sh_shopify_connector.sh_shopify_configurtion_queue_action
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_contact_queue
+#: model_terms:ir.actions.act_window,help:sh_shopify_connector.sh_shopify_configurtion_queue_action
+msgid "Contact Queue"
+msgstr "聯繫隊列"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_contact_id
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__type___contact
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+msgid "Contacts"
+msgstr "聯繫人"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "Contacts Queue"
+msgstr "聯繫方式隊列"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__create_invoice
+msgid "Create Invoice"
+msgstr "創建發票"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__create_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__create_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__create_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__create_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__create_uid
+msgid "Created by"
+msgstr "由...製作"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__create_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__create_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__create_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__create_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__create_date
+msgid "Created on"
+msgstr "創建於"
+
+#. module: sh_shopify_connector
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_credentials
+msgid "Credentials"
+msgstr "證書"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__cust_count
+msgid "Cust Count"
+msgstr "CUST計數"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__cust_last_count
+msgid "Cust Last Count"
+msgstr "上次計數"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__datetime
+msgid "Date & Time"
+msgstr "約會時間"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_location__shopify_primary_location
+msgid "Default"
+msgstr "默認"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_company__workflow_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_config_settings__workflow_id
+msgid "Default Workflow"
+msgstr "默認工作流程"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_payment__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_ir_attachment__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_attribute__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template_attribute_value__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_company__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_advance_payment_inv__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_location__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_queue__sh_current_state__done
+msgid "Done"
+msgstr "完畢"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_queue__sh_current_state__draft
+msgid "Draft"
+msgstr "草案"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__type___draft_orders
+msgid "Draft Orders"
+msgstr "訂單草案"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_company__group_auto_sale_workflow
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_config_settings__group_auto_sale_workflow
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__is_boolean
+msgid "Enable Auto Workflow"
+msgstr "啟用自動工作流程"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__state__error
+msgid "Failed"
+msgstr "失敗的"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__shh_firstname
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_users__shh_firstname
+msgid "Firstname"
+msgstr "名"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__force_transfer
+msgid "Force Transfer"
+msgstr "強制轉移"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "From Date"
+msgstr "從日期"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__contact_from_date
+msgid "From Date Contact"
+msgstr "從日期聯繫人"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__order_from_date
+msgid "From Date Orders"
+msgstr "從日期訂單開始"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__product_from_date
+msgid "From Date Product"
+msgstr "從日期產品開始"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sh_popup_message
+msgid "Helps User to know action was failure or successfull"
+msgstr "幫助用戶知道行動失敗或成功"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sh_queue
+msgid "Helps you to add incoming req in queue"
+msgstr "幫助您在隊列中添加傳入的req"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sh_shopify_log
+msgid "Helps you to maintain the activity done"
+msgstr "幫助您維護完成的活動"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_host_name
+msgid "Host Name"
+msgstr "主機名"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move_line__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_payment__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_ir_attachment__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_attribute__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template_attribute_value__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_company__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_advance_payment_inv__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order_line__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_location__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move_line__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__import_order_after
+msgid "Import After"
+msgstr "進口後"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "Import Between Dates"
+msgstr "日期之間導入"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__contact_import_between_dates
+msgid "Import Between Dates Contact"
+msgstr "日期之間導入聯繫方式"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__order_import_between_dates
+msgid "Import Between Dates Orders"
+msgstr "日期之間的進口訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__product_import_between_dates
+msgid "Import Between Dates Product"
+msgstr "在日期產品之間導入"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__import_contact
+msgid "Import Contacts"
+msgstr "導入聯繫人"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__import_draft_orders
+msgid "Import Draft Orders"
+msgstr "進口訂單草案"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__also_import_image
+msgid "Import Images"
+msgstr "進口圖像"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__product_import_limit
+msgid "Import Limit"
+msgstr "進口限制"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__import_orders
+msgid "Import Orders"
+msgstr "進口訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__import_products
+msgid "Import Products"
+msgstr "進口產品"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_contact_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_contact_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_contact_cron
+msgid "Import shopify Contact From Queue"
+msgstr "導入隊列購物聯繫人"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_orders_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_orders_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_orders_cron
+msgid "Import shopify Orders From Queue"
+msgstr "從隊列導入購物訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_product_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_product_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_product_cron
+msgid "Import shopify Product From Queue"
+msgstr "從隊列導入購物產品"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__name
+msgid "Instance"
+msgstr "實例"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_stock_location
+msgid "Inventory Locations"
+msgstr "庫存位置"
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/sale_order.py:0
+#, python-format
+msgid "It is not allowed to confirm an order in the following states: %s"
+msgstr "不允許在以下狀態下確認訂單： %s"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_account_move
+msgid "Journal Entry"
+msgstr "日記入學"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_account_move_line
+msgid "Journal Item"
+msgstr "期刊項目"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_sync_product
+msgid "LS Product"
+msgstr "LS產品"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_sync_quantity
+msgid "LS Quantity"
+msgstr "ls數量"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_payment____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_ir_attachment____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_attribute____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template_attribute_value____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_company____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_advance_payment_inv____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order_line____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_location____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "最後修改了"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_order
+msgid "Last Order"
+msgstr "最後的訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_product
+msgid "Last Product"
+msgstr "最後產品"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "Last Sync"
+msgstr "最後一個同步"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_sync_contact
+msgid "Last Sync Contact"
+msgstr "上次同步聯繫人"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_sync_order
+msgid "Last Sync Order"
+msgstr "上次同步訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_sync_order_date
+msgid "Last Sync Order Date"
+msgstr "上次同步訂單日期"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__write_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__write_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__write_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__write_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__write_uid
+msgid "Last Updated by"
+msgstr "最後更新"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__write_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__write_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__write_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__write_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__write_date
+msgid "Last Updated on"
+msgstr "上次更新了"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+msgid "Last sync"
+msgstr "最後一個同步"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__shh_lastname
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_users__shh_lastname
+msgid "Lastname"
+msgstr "姓"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "Log History"
+msgstr "日誌歷史記錄"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_force_contact_queue
+msgid "Manually Import"
+msgstr "手動導入"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__error
+msgid "Message"
+msgstr "信息"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__sh_shopify_name
+msgid "Mix Name"
+msgstr "混合名稱"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_queue_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__name
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_auto_sale_workflow_view_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "Name"
+msgstr "姓名"
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/sh_shopify_creds.py:0
+#: code:addons/sh_shopify_connector/models/sh_shopify_creds.py:0
+#, python-format
+msgid "Notification"
+msgstr "通知"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_export_failure_view
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_export_successfull_view
+msgid "Ok"
+msgstr "好的"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__order_count
+msgid "Order Count"
+msgstr "訂單數量"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.act_window,name:sh_shopify_connector.sh_shopify_order_queue_action
+#: model_terms:ir.actions.act_window,help:sh_shopify_connector.sh_shopify_order_queue_action
+msgid "Order Queue"
+msgstr "訂單隊列"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_order_id
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_queue__queue_type__order
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__type___orders
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_contact_queue_search_view
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+msgid "Orders"
+msgstr "訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_order_queue
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "Orders Queue"
+msgstr "訂單隊列"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__page_info
+msgid "Page Info"
+msgstr "頁面信息"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_password
+msgid "Password"
+msgstr "密碼"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__payment_journal
+msgid "Payment Journal"
+msgstr "付款期刊"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__payment_method
+msgid "Payment Method"
+msgstr "付款方法"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_account_payment
+msgid "Payments"
+msgstr "款項"
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/sale_order.py:0
+#, python-format
+msgid "Please define an accounting sales journal for the company %s (%s)."
+msgstr "請為公司定義會計銷售期刊 %s (%s)."
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_product_product
+msgid "Product"
+msgstr "產品"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_product_attribute
+msgid "Product Attribute"
+msgstr "產品屬性"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__shopify_product_category
+msgid "Product Category"
+msgstr "產品分類"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "產品移動（庫存移動線）"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.act_window,name:sh_shopify_connector.sh_shopify_product_queue_action
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_product_queue
+#: model_terms:ir.actions.act_window,help:sh_shopify_connector.sh_shopify_product_queue_action
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "Product Queue"
+msgstr "產品隊列"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_product_template
+msgid "Product Template"
+msgstr "產品模板"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_product_template_attribute_value
+msgid "Product Template Attribute Value"
+msgstr "產品模板屬性值"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template_attribute_value__sh_product_title_name
+msgid "Product Title"
+msgstr "產品標題"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_product_id
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_queue__queue_type__product
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__type___product
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_contact_queue_search_view
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "Products"
+msgstr "產品"
+
+#. module: sh_shopify_connector
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_queue
+msgid "Queue"
+msgstr "隊列"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__queue_type
+msgid "Queue Type"
+msgstr "隊列類型"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move_line__sh_refund_price
+msgid "Refundable Price"
+msgstr "可退款價格"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move_line__sh_refund_qty
+msgid "Refundable Quantity"
+msgstr "可退還的數量"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__register_payment
+msgid "Register Payment"
+msgstr "註冊付款"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__sale_journal
+msgid "Sale Journal"
+msgstr "銷售日報"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__workflow_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_users__workflow_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__workflow_id
+msgid "Sale Workflow"
+msgstr "銷售工作流程"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "銷售提前付款發票"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sale_order
+msgid "Sales Order"
+msgstr "銷售訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "銷售訂單線"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_secret_key
+msgid "Secret Key"
+msgstr "密鑰"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__send_invoice_by_email
+msgid "Send Invoice By Email"
+msgstr "通過電子郵件發送發票"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_current_config
+msgid "Sh Current Config"
+msgstr "SH當前配置"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_queue_ids
+msgid "Sh Queue"
+msgstr "SH隊列"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_bank_statement_line__sh_refund_success
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move__sh_refund_success
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_payment__sh_refund_success
+msgid "Sh Refund Success"
+msgstr "SH退款成功"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__sh_shopify_id
+msgid "Sh Shopify"
+msgstr "sh購物"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_total_customer
+msgid "Sh Total Customer"
+msgstr "SH總客戶"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_total_half_customer
+msgid "Sh Total Half Customer"
+msgstr "SH總計一半的客戶"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_total_half_orders
+msgid "Sh Total Half Orders"
+msgstr "SH總半訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_total_orders
+msgid "Sh Total Orders"
+msgstr "SH總訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.act_window,name:sh_shopify_connector.sh_shopify_configurtion_action
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_configuration_root
+msgid "Shopify"
+msgstr "購物"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_auto_import_contact_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_auto_import_contact_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_auto_import_contact_cron
+msgid "Shopify : Auto Import Contact"
+msgstr "Shopify：自動進口聯繫人"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_auto_import_orders_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_auto_import_orders_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_auto_import_orders_cron
+msgid "Shopify : Auto Import Orders"
+msgstr "Shopify：自動進口訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_auto_import_product_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_auto_import_product_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_auto_import_product_cron
+msgid "Shopify : Auto Import Product"
+msgstr "shopify：自動導入產品"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_tracking_number_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_tracking_number_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_tracking_number_cron
+msgid "Shopify : Auto Import Tracking Number"
+msgstr "shopify：自動導入跟踪號碼"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_ir_attachment__sh_shopify_attachment_id
+msgid "Shopify Attachment"
+msgstr "購物附件"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_attribute__sh_shopify_attribute_id
+msgid "Shopify Attribute"
+msgstr "shopify屬性"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__sh_shopify_configuration_id
+msgid "Shopify Configuration"
+msgstr "購物配置"
+
+#. module: sh_shopify_connector
+#: model:res.groups,name:sh_shopify_connector.sh_shopify_configuration_manager
+msgid "Shopify Configuration Manager"
+msgstr "購物配置管理器"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_confirm_orders
+msgid "Shopify Confirm Orders"
+msgstr "購物確認訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__sh_shopify_contact_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_users__sh_shopify_contact_id
+msgid "Shopify Contact"
+msgstr "購物聯繫人"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.actions.act_window,help:sh_shopify_connector.sh_shopify_configurtion_action
+msgid "Shopify Credentials"
+msgstr "購物憑據"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_sale_order_form
+msgid "Shopify Details"
+msgstr "購物詳情"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__sh_shopify_inventory_id
+msgid "Shopify Inventory"
+msgstr "購物庫存"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__sh_shopify_location_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_users__sh_shopify_location_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_location__sh_shopify_location_id
+msgid "Shopify Location"
+msgstr "購物位置"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__shopify_logger_id
+msgid "Shopify Logger"
+msgstr "購物記錄器"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order_line__sh_shopify_order_line_id
+msgid "Shopify Order Line"
+msgstr "購物訂單線"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__sh_shopify_order_name
+msgid "Shopify Order No"
+msgstr "購物訂單號"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__sh_shopify_order_id
+msgid "Shopify Orders"
+msgstr "購物訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__sh_shopify_price
+msgid "Shopify Price"
+msgstr "購物價格"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__shopify_primary_location_id
+msgid "Shopify Primary Location"
+msgstr "購物主要位置"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__sh_shopify_product_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template__sh_shopify_product_id
+msgid "Shopify Product"
+msgstr "購物產品"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_contact_queue_search_view
+msgid "Shopify Queue"
+msgstr "購物隊列"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__sh_shopify_draft_order_id
+msgid "Shopify Sale Order"
+msgstr "購物銷售訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_update_orders_again
+msgid "Shopify Update Orders"
+msgstr "購物更新訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__sh_shopify_product_variant_id
+msgid "Shopify Variant"
+msgstr "購物變體"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__single_product_id
+msgid "Single Product"
+msgstr "單一產品"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_current_state
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__state
+msgid "State"
+msgstr "狀態"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_stock_move
+msgid "Stock Move"
+msgstr "股票飛"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sh_shopify_configuration
+msgid "Stores Your Shopify Credentials"
+msgstr "存儲您的購物憑據"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__state__success
+msgid "Success"
+msgstr "成功"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+msgid "Sync Contacts"
+msgstr "通訊錄同步"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__queue_sync_date
+msgid "Sync Date-Time"
+msgstr "同步日期時間"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+msgid "Sync Orders"
+msgstr "同步訂單"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "Sync Products"
+msgstr "同步產品"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,help:sh_shopify_connector.field_account_move_line__sh_refund_qty
+msgid ""
+"The optional quantity expressed by this line, eg: number of product sold. "
+"The quantity is not a legal requirement but is very useful for some reports."
+msgstr ""
+"這條線表達的可選數量，例如：銷售的產品數量。 "
+"數量不是法律要求，但對一些報告非常有用。"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "To Date"
+msgstr "迄今為止"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__contact_to_date
+msgid "To Date Contact"
+msgstr "迄今為止聯繫人"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__order_to_date
+msgid "To Date Orders"
+msgstr "到目前為止訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__product_to_date
+msgid "To Date Product"
+msgstr "到目前為止產品"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__total_count_contact
+msgid "Total Count Contact"
+msgstr "總數聯繫"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__total_count_orders
+msgid "Total Count Orders"
+msgstr "總計數訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__total_count_product
+msgid "Total Count Product"
+msgstr "總計產品"
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_stock_picking
+msgid "Transfer"
+msgstr "轉移"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__type_
+msgid "Type "
+msgstr "類型"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__validate_order
+msgid "Validate Delivery Order"
+msgstr "驗證交貨訂單"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__validate_invoice
+msgid "Validate Invoice"
+msgstr "驗證發票"
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_warehouse_id
+msgid "Warehouse"
+msgstr "倉庫"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_auto_sale_workflow_view_form
+msgid "Workflow Option"
+msgstr "工作流程選項"
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/account_payment.py:0
+#, python-format
+msgid "You can only register payments for open invoices"
+msgstr "您只能註冊公開發票的付款"
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/account_payment.py:0
+#, python-format
+msgid ""
+"You cannot register payments for customer invoices and credit notes at the "
+"same time."
+msgstr ""
+"您無法註冊客戶發票和信用票據的付款 "
+"同時。"
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/account_payment.py:0
+#, python-format
+msgid ""
+"You cannot register payments for vendor bills and supplier refunds at the "
+"same time."
+msgstr ""
+"您無法註冊供營商票據和供應商退款的付款 "
+"同時。"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "shopify Credentials"
+msgstr "購物憑據"

@@ -1,0 +1,120 @@
+<odoo>
+    <record id="sh_shopify_configuration_manager" model="res.groups">
+        <field name="name">Shopify Configuration Manager</field>
+    </record>
+    <record id="group_auto_sale_workflow" model="res.groups">
+        <field name="name">Auto sale workflow</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+    <record id="sh_shopify_contact_cron" model="ir.cron">
+        <field name="name">Import shopify Contact From Queue</field>
+        <field name="interval_number">3</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_shopify_connector.model_sh_shopify_configuration" />
+        <field name="code">model.manage_import_contact()</field>
+        <field name="state">code</field>
+        <field name="active" eval="True" />
+    </record>
+    <record id="sh_shopify_orders_cron" model="ir.cron">
+        <field name="name">Import shopify Orders From Queue</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_shopify_connector.model_sh_shopify_configuration" />
+        <field name="code">model.manage_import_order()</field>
+        <field name="state">code</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="sh_shopify_auto_import_contact_cron" model="ir.cron">
+        <field name="name">Shopify : Auto Import Contact</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_shopify_connector.model_sh_shopify_configuration" />
+        <field name="code">model._shopify_contact_cron()</field>
+        <field name="state">code</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="sh_shopify_auto_import_orders_cron" model="ir.cron">
+        <field name="name">Shopify : Auto Import Orders</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_shopify_connector.model_sh_shopify_configuration" />
+        <field name="code">model._shopify_orders_cron()</field>
+        <field name="state">code</field>
+        <field name="active" eval="True" />
+    </record>
+        <record id="sh_shopify_auto_import_product_cron" model="ir.cron">
+        <field name="name">Shopify : Auto Import Product</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_shopify_connector.model_sh_shopify_configuration" />
+        <field name="code">model._shopify_product_cron()</field>
+        <field name="state">code</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="sh_shopify_product_cron" model="ir.cron">
+        <field name="name">Import shopify Product From Queue</field>
+        <field name="interval_number">3</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_shopify_connector.model_sh_shopify_configuration" />
+        <field name="code">model.manage_import_product()</field>
+        <field name="state">code</field>
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="sh_shopify_tracking_number_cron" model="ir.cron">
+        <field name="name">Shopify : Auto Import Tracking Number</field>
+        <field name="interval_number">4</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_shopify_connector.model_sh_shopify_configuration" />
+        <field name="code">model._shopify_tracking_number_cron()</field>
+        <field name="state">code</field>
+        <field name="active" eval="True" />
+    </record>
+    <record model="ir.actions.server" id="sh_force_contact_queue">
+        <field name="name">Manually Import</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_sh_queue" />
+        <field name="binding_model_id" ref="model_sh_queue" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.import_shopify_manually()
+        </field>
+    </record>
+    <record model="ir.actions.server" id="sh_update_orders_again">
+        <field name="name">Shopify Update Orders</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_sale_order" />
+        <field name="binding_model_id" ref="model_sale_order" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.manually_update_orders()
+        </field>
+    </record>
+    <record model="ir.actions.server" id="sh_shopify_confirm_orders">
+        <field name="name">Shopify Confirm Orders</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_sale_order" />
+        <field name="binding_model_id" ref="model_sale_order" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.manually_confirm_shopify_orders()
+        </field>
+    </record>
+</odoo>

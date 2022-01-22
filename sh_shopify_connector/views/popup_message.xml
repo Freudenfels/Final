@@ -1,0 +1,28 @@
+<odoo>
+    <record id="sh_export_successfull_view" model="ir.ui.view">
+        <field name="name">sh.exoprt.successfull.view</field>
+        <field name="model">sh.popup.message</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <div>
+                <b>Imported Successfully</b>
+            </div>
+            <footer>
+                <button string="Ok" class="btn-default" special="cancel" />
+            </footer>
+        </field>
+    </record>
+    <record id="sh_export_failure_view" model="ir.ui.view">
+        <field name="name">sh.exoprt.failure.view</field>
+        <field name="model">sh.popup.message</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <div>
+                <b>Failed To Import</b>
+            </div>
+            <footer>
+                <button string="Ok" class="btn-default" special="cancel" />
+            </footer>
+        </field>
+    </record>
+</odoo>

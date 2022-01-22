@@ -1,0 +1,1085 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_shopify_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-26 13:00+0000\n"
+"PO-Revision-Date: 2021-11-26 13:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_export_failure_view
+msgid "<b>Failed To Import</b>"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_export_successfull_view
+msgid "<b>Imported Successfully</b>"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__all_contacts_imported_successfully
+msgid "All Contacts Imported Successfully"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__all_orders_imported
+msgid "All Orders Imported"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_api_key
+msgid "Api Key"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_ir_attachment
+msgid "Attachment"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__auto_import_contact
+msgid "Auto Import Contacts"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__auto_import_draft_orders
+msgid "Auto Import Draft ORders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__auto_import_orders
+msgid "Auto Import Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__auto_import_products
+msgid "Auto Import Products"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_sale_res_config_settings_view_form
+msgid "Auto Sale Workflow Settings"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.act_window,name:sh_shopify_connector.sh_auto_sale_workflow_action
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_auto_sale_workflow_menu
+msgid "Auto Sales Workflow"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "Auto Schedule"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sh_auto_sale_workflow
+msgid "Auto Workflow Working"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:res.groups,name:sh_shopify_connector.group_auto_sale_workflow
+msgid "Auto sale workflow"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__shopify_cn_number
+msgid "CN Number"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/sh_shopify_contacts.py:0
+#, python-format
+msgid "Check Your Credentials and Try Again After Sometime"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__company_id
+msgid "Company"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_confirm_order
+msgid "Confirm Order"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_res_partner
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_queue__queue_type__contact
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_contact_queue_search_view
+msgid "Contact"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.act_window,name:sh_shopify_connector.sh_shopify_configurtion_queue_action
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_contact_queue
+#: model_terms:ir.actions.act_window,help:sh_shopify_connector.sh_shopify_configurtion_queue_action
+msgid "Contact Queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_contact_id
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__type___contact
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+msgid "Contacts"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "Contacts Queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__create_invoice
+msgid "Create Invoice"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__create_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__create_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__create_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__create_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__create_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__create_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__create_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__create_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_credentials
+msgid "Credentials"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__cust_count
+msgid "Cust Count"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__cust_last_count
+msgid "Cust Last Count"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__datetime
+msgid "Date & Time"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_location__shopify_primary_location
+msgid "Default"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_company__workflow_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_config_settings__workflow_id
+msgid "Default Workflow"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_payment__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_ir_attachment__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_attribute__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template_attribute_value__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_company__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_advance_payment_inv__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_location__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_picking__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_queue__sh_current_state__done
+msgid "Done"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_queue__sh_current_state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__type___draft_orders
+msgid "Draft Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_company__group_auto_sale_workflow
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_config_settings__group_auto_sale_workflow
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__is_boolean
+msgid "Enable Auto Workflow"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__state__error
+msgid "Failed"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__shh_firstname
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_users__shh_firstname
+msgid "Firstname"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__force_transfer
+msgid "Force Transfer"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "From Date"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__contact_from_date
+msgid "From Date Contact"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__order_from_date
+msgid "From Date Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__product_from_date
+msgid "From Date Product"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sh_popup_message
+msgid "Helps User to know action was failure or successfull"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sh_queue
+msgid "Helps you to add incoming req in queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sh_shopify_log
+msgid "Helps you to maintain the activity done"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_host_name
+msgid "Host Name"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move_line__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_payment__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_ir_attachment__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_attribute__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template_attribute_value__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_company__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_advance_payment_inv__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order_line__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_location__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move_line__id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__import_order_after
+msgid "Import After"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "Import Between Dates"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__contact_import_between_dates
+msgid "Import Between Dates Contact"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__order_import_between_dates
+msgid "Import Between Dates Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__product_import_between_dates
+msgid "Import Between Dates Product"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__import_contact
+msgid "Import Contacts"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__import_draft_orders
+msgid "Import Draft Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__also_import_image
+msgid "Import Images"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__product_import_limit
+msgid "Import Limit"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__import_orders
+msgid "Import Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__import_products
+msgid "Import Products"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_contact_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_contact_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_contact_cron
+msgid "Import shopify Contact From Queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_orders_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_orders_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_orders_cron
+msgid "Import shopify Orders From Queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_product_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_product_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_product_cron
+msgid "Import shopify Product From Queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__name
+msgid "Instance"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_stock_location
+msgid "Inventory Locations"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/sale_order.py:0
+#, python-format
+msgid "It is not allowed to confirm an order in the following states: %s"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_sync_product
+msgid "LS Product"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_sync_quantity
+msgid "LS Quantity"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_payment____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_ir_attachment____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_attribute____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template_attribute_value____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_company____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_advance_payment_inv____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order_line____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_location____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_order
+msgid "Last Order"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_product
+msgid "Last Product"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "Last Sync"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_sync_contact
+msgid "Last Sync Contact"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_sync_order
+msgid "Last Sync Order"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__last_sync_order_date
+msgid "Last Sync Order Date"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__write_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__write_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__write_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__write_uid
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__write_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_popup_message__write_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__write_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__write_date
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+msgid "Last sync"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__shh_lastname
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_users__shh_lastname
+msgid "Lastname"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "Log History"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_force_contact_queue
+msgid "Manually Import"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__error
+msgid "Message"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__sh_shopify_name
+msgid "Mix Name"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_queue_name
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__name
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_auto_sale_workflow_view_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "Name"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/sh_shopify_creds.py:0
+#: code:addons/sh_shopify_connector/models/sh_shopify_creds.py:0
+#, python-format
+msgid "Notification"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_export_failure_view
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_export_successfull_view
+msgid "Ok"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__order_count
+msgid "Order Count"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.act_window,name:sh_shopify_connector.sh_shopify_order_queue_action
+#: model_terms:ir.actions.act_window,help:sh_shopify_connector.sh_shopify_order_queue_action
+msgid "Order Queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_order_id
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_queue__queue_type__order
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__type___orders
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_contact_queue_search_view
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+msgid "Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_order_queue
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "Orders Queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__page_info
+msgid "Page Info"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_password
+msgid "Password"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__payment_journal
+msgid "Payment Journal"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__payment_method
+msgid "Payment Method"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/sale_order.py:0
+#, python-format
+msgid "Please define an accounting sales journal for the company %s (%s)."
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_product_product
+msgid "Product"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_product_attribute
+msgid "Product Attribute"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__shopify_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.act_window,name:sh_shopify_connector.sh_shopify_product_queue_action
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_product_queue
+#: model_terms:ir.actions.act_window,help:sh_shopify_connector.sh_shopify_product_queue_action
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "Product Queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_product_template_attribute_value
+msgid "Product Template Attribute Value"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template_attribute_value__sh_product_title_name
+msgid "Product Title"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_product_id
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_queue__queue_type__product
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__type___product
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_contact_queue_search_view
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "Products"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_queue
+msgid "Queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__queue_type
+msgid "Queue Type"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move_line__sh_refund_price
+msgid "Refundable Price"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move_line__sh_refund_qty
+msgid "Refundable Quantity"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__register_payment
+msgid "Register Payment"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__sale_journal
+msgid "Sale Journal"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__workflow_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_users__workflow_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__workflow_id
+msgid "Sale Workflow"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_secret_key
+msgid "Secret Key"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__send_invoice_by_email
+msgid "Send Invoice By Email"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_current_config
+msgid "Sh Current Config"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_queue_ids
+msgid "Sh Queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_bank_statement_line__sh_refund_success
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_move__sh_refund_success
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_account_payment__sh_refund_success
+msgid "Sh Refund Success"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__sh_shopify_id
+msgid "Sh Shopify"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_total_customer
+msgid "Sh Total Customer"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_total_half_customer
+msgid "Sh Total Half Customer"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_total_half_orders
+msgid "Sh Total Half Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_total_orders
+msgid "Sh Total Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.act_window,name:sh_shopify_connector.sh_shopify_configurtion_action
+#: model:ir.ui.menu,name:sh_shopify_connector.sh_shopify_configuration_root
+msgid "Shopify"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_auto_import_contact_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_auto_import_contact_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_auto_import_contact_cron
+msgid "Shopify : Auto Import Contact"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_auto_import_orders_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_auto_import_orders_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_auto_import_orders_cron
+msgid "Shopify : Auto Import Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_auto_import_product_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_auto_import_product_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_auto_import_product_cron
+msgid "Shopify : Auto Import Product"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_tracking_number_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_shopify_connector.sh_shopify_tracking_number_cron
+#: model:ir.cron,name:sh_shopify_connector.sh_shopify_tracking_number_cron
+msgid "Shopify : Auto Import Tracking Number"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_ir_attachment__sh_shopify_attachment_id
+msgid "Shopify Attachment"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_attribute__sh_shopify_attribute_id
+msgid "Shopify Attribute"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__sh_shopify_configuration_id
+msgid "Shopify Configuration"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:res.groups,name:sh_shopify_connector.sh_shopify_configuration_manager
+msgid "Shopify Configuration Manager"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_shopify_confirm_orders
+msgid "Shopify Confirm Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__sh_shopify_contact_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_users__sh_shopify_contact_id
+msgid "Shopify Contact"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.actions.act_window,help:sh_shopify_connector.sh_shopify_configurtion_action
+msgid "Shopify Credentials"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_sale_order_form
+msgid "Shopify Details"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__sh_shopify_inventory_id
+msgid "Shopify Inventory"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_partner__sh_shopify_location_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_res_users__sh_shopify_location_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_stock_location__sh_shopify_location_id
+msgid "Shopify Location"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__shopify_logger_id
+msgid "Shopify Logger"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order_line__sh_shopify_order_line_id
+msgid "Shopify Order Line"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__sh_shopify_order_name
+msgid "Shopify Order No"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__sh_shopify_order_id
+msgid "Shopify Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__sh_shopify_price
+msgid "Shopify Price"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__shopify_primary_location_id
+msgid "Shopify Primary Location"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__sh_shopify_product_id
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_template__sh_shopify_product_id
+msgid "Shopify Product"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_contact_queue_search_view
+msgid "Shopify Queue"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sale_order__sh_shopify_draft_order_id
+msgid "Shopify Sale Order"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.actions.server,name:sh_shopify_connector.sh_update_orders_again
+msgid "Shopify Update Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_product_product__sh_shopify_product_variant_id
+msgid "Shopify Variant"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__single_product_id
+msgid "Single Product"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__sh_current_state
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__state
+msgid "State"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_sh_shopify_configuration
+msgid "Stores Your Shopify Credentials"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields.selection,name:sh_shopify_connector.selection__sh_shopify_log__state__success
+msgid "Success"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+msgid "Sync Contacts"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_queue__queue_sync_date
+msgid "Sync Date-Time"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+msgid "Sync Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "Sync Products"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,help:sh_shopify_connector.field_account_move_line__sh_refund_qty
+msgid ""
+"The optional quantity expressed by this line, eg: number of product sold. "
+"The quantity is not a legal requirement but is very useful for some reports."
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_contacts_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_draft_orders_form
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.shopify_products_form
+msgid "To Date"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__contact_to_date
+msgid "To Date Contact"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__order_to_date
+msgid "To Date Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__product_to_date
+msgid "To Date Product"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__total_count_contact
+msgid "Total Count Contact"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__total_count_orders
+msgid "Total Count Orders"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__total_count_product
+msgid "Total Count Product"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model,name:sh_shopify_connector.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_log__type_
+msgid "Type "
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__validate_order
+msgid "Validate Delivery Order"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_auto_sale_workflow__validate_invoice
+msgid "Validate Invoice"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model:ir.model.fields,field_description:sh_shopify_connector.field_sh_shopify_configuration__sh_warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_auto_sale_workflow_view_form
+msgid "Workflow Option"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/account_payment.py:0
+#, python-format
+msgid "You can only register payments for open invoices"
+msgstr ""
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/account_payment.py:0
+#, python-format
+msgid ""
+"You cannot register payments for customer invoices and credit notes at the "
+"same time."
+msgstr ""
+
+#. module: sh_shopify_connector
+#: code:addons/sh_shopify_connector/models/account_payment.py:0
+#, python-format
+msgid ""
+"You cannot register payments for vendor bills and supplier refunds at the "
+"same time."
+msgstr ""
+
+#. module: sh_shopify_connector
+#: model_terms:ir.ui.view,arch_db:sh_shopify_connector.sh_shopify_configuration_form
+msgid "shopify Credentials"
+msgstr ""

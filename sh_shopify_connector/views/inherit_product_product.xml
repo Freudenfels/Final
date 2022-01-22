@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_shopify_product_price" model="ir.ui.view">
+        <field name="name">sh.shopify.product.price</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='taxes_id']" position="before">
+                <field name="sh_shopify_price"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_shopify_product_easy_price" model="ir.ui.view">
+        <field name="name">sh.shopify.product.easy.price</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_variant_easy_edit_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='pricing']" position="inside">
+                <field name="sh_shopify_price"/>
+            </xpath>
+        </field>
+    </record>
+  </odoo>

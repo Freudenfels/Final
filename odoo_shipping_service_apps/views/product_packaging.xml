@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Copyright (c) 2018-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+	<!-- See LICENSE URL <https://store.webkul.com/license.html/> for full copyright and licensing details. -->
+
+
+      <!-- <record id="view_product_packaging_search" model="ir.ui.view">
+       <field name="name">product.packaging.search.delivery</field>
+        <field name="model">product.packaging</field>
+        <field name="arch" type="xml">
+            <search string="Picking Lists">
+              <filter
+               string="Extenal Packaging"
+                name="shipping"
+                domain="[('package_carrier_type','not in', ['fixed', 'base_on_rule','none'])]]"
+                help="Extenal Shipping Packaging"/>
+               <group expand="0" string="Group By">
+                      <filter string="Carrier" domain="[]" context="{'group_by':'package_carrier_type'}"/>
+                </group>
+            </search>
+          </field>
+      </record>
+ -->
+
+    <record model="ir.ui.view" id="product_packaging_delivery_form">
+        <field name="name">product.packaging.form.delivery</field>
+        <field name="model">stock.package.type</field>
+        <field name="inherit_id" ref="stock.stock_package_type_form"/>
+        <field name="arch" type="xml">
+          <!-- notebook -->
+            <group name="delivery" position="attributes">
+                 <attribute name="col">4</attribute>
+             </group>
+             <!-- <group name="delivery" position="inside">
+               <field name="qty"/>
+             </group> -->
+               
+             <group name="delivery" position="after">
+               <group name="cover_amount" attrs="{'invisible': [('package_carrier_type', 'in', ['fixed', 'base_on_rule','none'])]}">
+                  <label for="cover_amount" string='Cover Amount'/>
+                 <div>
+                 <field
+                   class="oe_inline"
+                     name="cover_amount"
+                     attrs="{'required':[('package_carrier_type','not in', ['fixed', 'base_on_rule','none'])]}"/>
+                 <field
+                   class="oe_inline"
+                     name="cover_amount_option"
+                     attrs="{'required':[('package_carrier_type','not in', ['fixed', 'base_on_rule','none'])]}"/>
+                </div>
+               </group>
+                <group string ='Products'>
+                  <field name='product_tmpl_ids' nolabel='1'/>
+                </group>
+               <notebook>
+               </notebook>
+             </group>
+
+             <field name="shipper_package_code" position="attributes">
+                  <attribute name="attrs">{'required':[('package_carrier_type','not in', ['fixed', 'base_on_rule','none'])]}</attribute>
+              </field>
+             <field name="height" position="attributes">
+                 <attribute name="attrs">{'required':[('package_carrier_type','not in', ['fixed', 'base_on_rule','none'])]}</attribute>
+             </field>
+             <field name="width" position="attributes">
+                 <attribute name="attrs">{'required':[('package_carrier_type','not in', ['fixed', 'base_on_rule','none'])]}</attribute>
+             </field>
+             <field name="packaging_length" position="attributes">
+                 <attribute name="attrs">{'required':[('package_carrier_type','not in', ['fixed', 'base_on_rule','none'])]}</attribute>
+             </field>
+             <field name="max_weight" position="attributes">
+                 <attribute name="attrs">{'required':[('package_carrier_type','not in', ['fixed', 'base_on_rule','none'])]}</attribute>
+             </field>
+        </field>
+    </record>
+
+
+</odoo>

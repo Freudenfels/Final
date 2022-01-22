@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="shopify_draft_orders_form" model="ir.ui.view">
+        <field name="name">shopify.draft_otders.form</field>
+        <field name="model">sh.shopify.configuration</field>
+        <field name="inherit_id" ref="sh_shopify_connector.sh_shopify_configuration_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/notebook/page[@name='products']" position="after">
+                <page name="draft_order" string="Orders">
+                    <group>
+                        <group>
+                            <field name="import_orders"/>
+                            <field name="last_sync_order" string="Last Sync" readonly="1"/>
+                            <button type="object" class="btn btn-primary mt-2" name="submit_draft_orders" string="Sync Orders"/>                               
+                        </group>
+                        <group>
+                            <field name="sh_confirm_order"/>
+                            <field name="order_import_between_dates" string="Import Between Dates"/>
+                            <field name="order_from_date" attrs="{'invisible' : [('order_import_between_dates', '=', False)]}" string="From Date"/>
+                            <field name="order_to_date" attrs="{'invisible' : [('order_import_between_dates', '=', False)]}" string="To Date"/>
+                        </group>
+                    </group>
+                    <h3 class="text-primary">Auto Schedule</h3>
+                    <group>
+                        <field name="auto_import_orders"/>                       
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

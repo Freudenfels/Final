@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Copyright (c) 2018-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+  <!-- See LICENSE URL <https://store.webkul.com/license.html/> for full copyright and licensing details. -->
+    <template id="assets_frontend" name="assets_frontend" inherit_id="website.assets_frontend">
+      <xpath expr="." position="inside">
+         <link rel="stylesheet" href="/odoo_shipping_service_apps/static/src/css/odoo_shipping_service_apps.css"/>
+            <script type="text/javascript" src="/odoo_shipping_service_apps/static/src/js/odoo_shipping_service_apps.js"></script>
+        </xpath>
+    </template>
+    <template id="payment_delivery"
+      name="website shipping"
+       inherit_id="website_sale_delivery.payment_delivery" >
+        <xpath expr="//div[@class='col-lg-5 col-sm-6']" position="replace">
+            <div class="col-lg-5 col-sm-6">
+              <ul class="list-group">
+                <a href="#" class="list-group-item active" style="font-size:16px"><i class="fa fa-rocket fa-2x"></i> <label>Choose Your Delivery Method</label></a>
+                <a href="#" class="list-group-item" t-foreach="deliveries" t-as="delivery" >
+                  <!-- <t t-if="delivery.available"> -->
+                    <label t-att-title="delivery.website_description">
+                      <input t-att-value="delivery.id"
+                        type="radio"
+                        name="delivery_type"
+                        t-att-checked="order.carrier_id and order.carrier_id.id== delivery.id and 'checked' or False"/>
+                      <t t-if="delivery.image">
+                      <span t-field="delivery.image"
+                        class='delivery_image'
+                        style="width: 60px; height:30px; display: inline-block;"
+                        t-field-options='{"widget": "image", "class": "img-small"}'/>
+                      </t>
+                   <span t-field="delivery.name" />
+                    </label>
+                  <!-- </t> -->
+                </a>
+              </ul>
+            </div>
+            <div class="wk_odoo_shipping_loader" style="display:none;"/>
+          </xpath>
+    </template>
+
+</odoo>

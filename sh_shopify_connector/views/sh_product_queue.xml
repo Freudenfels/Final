@@ -1,0 +1,28 @@
+<odoo>
+    <record id='sh_shopify_product_queue_tree' model='ir.ui.view'>
+        <field name="name">sh.queue.product.tree</field>
+        <field name="model">sh.queue</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sh_queue_name"/>
+                <field name="sh_product_id"/>
+                <field name="queue_sync_date"/>
+                <field name="sh_current_state"/>
+            </tree>
+        </field>
+    </record>
+    <record id="sh_shopify_product_queue_action" model="ir.actions.act_window">
+        <field name="name">Product Queue</field>
+        <field name="res_model">sh.queue</field>
+        <field name="context">{'search_default_product_queue': 1}</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="sh_shopify_product_queue_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Product Queue
+            </p>
+        </field>
+    </record>
+    <menuitem name="Product Queue" id="sh_shopify_product_queue" action="sh_shopify_product_queue_action" parent="sh_shopify_queue" sequence="2"/>
+</odoo>

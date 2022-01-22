@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <!-- DHL Parcel Product Packagings -->
+    <record id="dhl_de_paket_packaging" model="product.packaging">
+        <field name="name">DHL Package</field>
+        <field name="package_carrier_type">dhl_de_paket</field>
+        <field name="max_weight">0</field><!--kg-->
+        <field name="height">0</field><!--cm-->
+        <field name="width">0</field>
+        <field name="packaging_length">0</field>
+        <field name="dhl_is_bulky">False</field>
+    </record>
+
+    <record id="dhl_de_paket_packaging_bulky" model="product.packaging">
+        <field name="name">DHL Package(Bulky)</field>
+        <field name="package_carrier_type">dhl_de_paket</field>
+        <field name="max_weight">0</field><!--kg-->
+        <field name="height">0</field><!--cm-->
+        <field name="width">0</field>
+        <field name="packaging_length">0</field>
+        <field name="dhl_is_bulky">True</field>
+    </record>
+
+</data>
+</odoo>

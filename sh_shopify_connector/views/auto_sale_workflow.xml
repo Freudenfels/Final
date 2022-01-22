@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+    <record id="sh_auto_sale_workflow_view_form" model="ir.ui.view">
+        <field name="name">sh.auto.sale.workflow.view.form</field>
+        <field name="model">sh.auto.sale.workflow</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" required="1" default_focus="1" placeholder="Name" />
+                        </h1>
+                    </div>
+                    <group>
+                       <group string = "Workflow Option">
+                            <field name = "validate_order"/>
+                            <field name = "force_transfer" attrs="{'invisible':[('validate_order', '=', False)]}"/>
+                            <field name = "create_invoice" />
+                            <field name = "validate_invoice" attrs="{'invisible':[('create_invoice', '=', False)]}"/>
+                            <field name = "register_payment" attrs="{'invisible':['|',('create_invoice', '=', False),('validate_invoice', '=', False)]}"/>
+                            <field name = "send_invoice_by_email" attrs="{'invisible':['|',('create_invoice', '=', False),('validate_invoice', '=', False)]}"/>
+                       </group>
+                        <group>
+                            <field name = "sale_journal" attrs="{'invisible':[('create_invoice', '=', False)],'required':[('create_invoice','=',True)]}" domain="[('type','=','sale')]"  options="{'no_create': True, 'no_create_edit':True}" />
+                            <field name = "payment_journal" attrs="{'invisible':['|','|',('create_invoice', '=', False),('validate_invoice', '=', False),('register_payment', '=', False)],'required':[('create_invoice','=',True),('validate_invoice', '=', True),('register_payment', '=', True)]}" domain="[('type', 'in', ('bank', 'cash'))]"  options="{'no_create': True, 'no_create_edit':True}" />
+                            <field name = "payment_method" attrs="{'invisible':['|','|',('create_invoice', '=', False),('validate_invoice', '=', False),('register_payment', '=', False)],'required':[('create_invoice','=',True),('validate_invoice', '=', True),('register_payment', '=', True)]}" domain="[('payment_type', '=', 'inbound')]"   />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="sh_auto_sale_workflow_view_tree" model="ir.ui.view">
+        <field name="name">sh.auto.sale.workflow.view.tree</field>
+        <field name="model">sh.auto.sale.workflow</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name = "name"/>
+                <field name = "validate_order"/>
+                <field name = "force_transfer" />
+                <field name = "create_invoice" />
+                <field name = "validate_invoice" />
+                <field name = "register_payment" />
+                <field name = "send_invoice_by_email" />
+                <field name = "sale_journal" />
+                <field name = "payment_journal" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_auto_sale_workflow_action" model="ir.actions.act_window">
+        <field name="name">Auto Sales Workflow</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.auto.sale.workflow</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    
+    <menuitem   id="sh_auto_sale_workflow_menu" 
+                name="Auto Sales Workflow" 
+                parent="sale.menu_sale_config" 
+                action="sh_auto_sale_workflow_action" 
+                sequence="99" 
+                groups = "sh_shopify_connector.group_auto_sale_workflow"/>
+</odoo>

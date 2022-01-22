@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="shopify_sale_order_form" model="ir.ui.view">
+        <field name="name">shopify.sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='other_information']/group/group[@name='sale_info']/field[@name='invoice_status']" position="after">
+                <h2 class="text-primary mt-3 mb-2">Shopify Details</h2>
+                <field name="sh_shopify_order_name"/>
+                <field name="shopify_cn_number"/>
+                <field name="sh_shopify_configuration_id"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="shopify_sale_order_tree" model="ir.ui.view">
+        <field name="name">shopify.sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="shopify_cn_number" readonly="1"/>            
+            </field>
+            <field name="state" position="after">
+                <field name="workflow_id" optional="hide" groups="sh_shopify_connector.group_auto_sale_workflow"/>
+            </field>
+        </field>
+    </record>
+    <record id="shopify_cn_number_search" model="ir.ui.view">
+        <field name="name">Shopify CN Number</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">           
+            <search>              
+                <field name="shopify_cn_number"/>
+                <field name="sh_shopify_order_name"/>
+            </search>
+        </field>
+    </record>
+  </odoo>

@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_carrier_history_user,delivery.carrier.history.user,model_delivery_carrier_history,stock.group_stock_manager,1,1,1,1
+access_carrier_history_manager,delivery.carrier.history.manager,model_delivery_carrier_history,,1,0,0,0
+access_product_package_manager,product.package,model_product_package,stock.group_stock_manager,1,1,1,1
+access_product_package_user,product.package,model_product_package,,1,0,0,0
+access_product_package_line_manager,product.package.line,model_product_package_line,stock.group_stock_manager,1,1,1,1
+access_product_package_user_line,product.package.line,model_product_package_line,,1,0,0,0
+

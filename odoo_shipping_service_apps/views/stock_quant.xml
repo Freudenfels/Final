@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Copyright (c) 2018-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+	<!-- See LICENSE URL <https://store.webkul.com/license.html/> for full copyright and licensing details. -->
+
+  <record id="choose_delivery_package_view_form" model="ir.ui.view">
+      <field name="name">choose.delivery.package.form</field>
+      <field name="model">choose.delivery.package</field>
+      <field name="inherit_id" ref="delivery.choose_delivery_package_view_form"/>
+      <field name="arch" type="xml">
+              <xpath expr="//group[1]" position="after">
+                  <group name='amount'
+                    attrs="{'invisible': [('delivery_package_type_id', 'in', [False,None])]}"
+                    >
+                    <group>
+                      <field name='cover_amount'  invisible="context.get('no_cover_amount',True)"/>
+                    </group>
+                    <group>
+                      <field name='description'  invisible="context.get('no_description',True)"/>
+
+                    </group>
+                    <group>
+                      <field name='height'
+                        invisible="context.get('current_package_carrier_type') in ['fixed', 'base_on_rule','none']"/>
+                    </group>
+                    <group>
+                      <field name='width'
+                        invisible="context.get('current_package_carrier_type') in ['fixed', 'base_on_rule','none']"
+                        />
+                      <field name='wkk_length'
+                        invisible="context.get('current_package_carrier_type') in ['fixed', 'base_on_rule','none']"
+                        />
+                    </group>
+                  </group>
+              </xpath>
+      </field>
+  </record>
+
+  <record id="view_quant_package_form" model="ir.ui.view">
+      <field name="name">stock.quant.package.form</field>
+      <field name="model">stock.quant.package</field>
+      <field name="inherit_id" ref="stock.view_quant_package_form"/>
+      <field name="arch" type="xml">
+          <field name='package_type_id' position="after">
+              <field name='package_carrier_type' invisible='1'/>
+              </field>
+              <xpath expr="//group[1]" position="inside">
+                  <group name='amount'
+                    attrs="{'invisible': [('package_carrier_type', 'in', ['fixed', 'base_on_rule','none'])]}">
+                      <field name='height'/>
+                      <field name='width'/>
+                      <field name='length'/>
+                      <field name='cover_amount'/>
+                      <field name='description'/>
+                  </group>
+              </xpath>
+      </field>
+  </record>
+	 <record model="ir.ui.view" id="view_quant_package_tree">
+        <field name="name">stock.quant.package.tree</field>
+        <field name="model">stock.quant.package</field>
+        <field eval="10" name="priority"/>
+        <field name="arch" type="xml">
+            <tree string="Package"  decoration-muted="package_type_id" decoration-danger="not package_type_id" >
+                <field name="name"/>
+                <field name="package_type_id"/>
+               <field name="shipping_weight"/>
+               <field name="cover_amount"/>
+                <field name="height"/>
+                <field name="width"/>
+                <field name="length"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

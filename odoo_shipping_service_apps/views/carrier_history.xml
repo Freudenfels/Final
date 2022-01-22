@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Copyright (c) 2018-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+	<!-- See LICENSE URL <https://store.webkul.com/license.html/> for full copyright and licensing details. -->
+	<record id="delivery_carrier_history_form" model="ir.ui.view">
+			<field name="name">delivery.carrier.history.form</field>
+			<field name="model">delivery.carrier.history</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+					<form string='History' create="false" edit='false'>
+							<sheet>
+									<group>
+											 <group>
+												 <field name="order_id"/>
+												 <field name="carrier_id"/>
+												 <field name="zip_code"/>
+												 <field name="state_code"/>
+												 <field name="country_code"/>
+											 </group>
+											 <group>
+												<field name="price"/>
+												<field name="available"/>
+												<field name="currency"/>
+												<field name="wk_hash"/>
+
+											</group>
+								 </group>
+									<group>
+									<field name="message"/>
+									</group>
+							</sheet>
+					</form>
+			</field>
+	</record>
+	<record model="ir.ui.view" id="delivery_carrier_history_tree">
+			 <field name="name">delivery.carrier.history.tree</field>
+			 <field name="model">delivery.carrier.history</field>
+			 <field eval="10" name="priority"/>
+			 <field name="arch" type="xml">
+					 <tree string="History" create="false">
+							 <field name="available"/>
+							 <field name="order_id"/>
+							 <field name="carrier_id"/>
+							 <field name="price"/>
+							 <field name="currency"/>
+							 <field name="wk_hash"/>
+					 </tree>
+			 </field>
+	 </record>
+	 <record model="ir.actions.act_window" id="action_delivery_carrier_history">
+					 <field name="name">Rate History</field>
+					 <field name="res_model">delivery.carrier.history</field>
+					 <field name="view_mode">tree,form</field>
+					 <field name="view_id"
+							 ref="delivery_carrier_history_tree"/>
+	 </record>
+	 <menuitem
+			 id="menu_api_history_root"
+			 name="API History"
+			 parent="stock.menu_stock_config_settings" />
+			 <menuitem
+					 id="menu_carrier_history"
+					 name="Rate History"
+					 parent="menu_api_history_root"
+					 action="action_delivery_carrier_history"/>
+</odoo>

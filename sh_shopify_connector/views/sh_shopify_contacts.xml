@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="shopify_contacts_form" model="ir.ui.view">
+        <field name="name">shopify.contacts.form</field>
+        <field name="model">sh.shopify.configuration</field>
+        <field name="inherit_id" ref="sh_shopify_connector.sh_shopify_configuration_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[@name='creds']" position="after">
+                <notebook>
+                    <page name="contacts" string="Contacts">
+                        <group>
+                            <group>
+                                <field name="import_contact"/>
+                                <field name="last_sync_contact" string="Last sync" readonly="1"/>                       
+                                <button type="object" class="btn btn-primary mt-2" name="submit_contact" string="Sync Contacts"/>                               
+                            </group>
+                            <group>
+                                <field name="contact_import_between_dates" string="Import Between Dates"/>
+                                <field name="contact_from_date" attrs="{'invisible' : [('contact_import_between_dates', '=', False)]}" string="From Date"/>
+                                <field name="contact_to_date" attrs="{'invisible' : [('contact_import_between_dates', '=', False)]}" string="To Date"/>
+                            </group>
+                        </group>
+                        <h3 class="text-primary">Auto Schedule</h3>
+                        <group>
+                            <field name="auto_import_contact"/>
+                        </group>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+</odoo>

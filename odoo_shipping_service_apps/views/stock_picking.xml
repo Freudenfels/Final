@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Copyright (c) 2018-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+  <!-- See LICENSE URL <https://store.webkul.com/license.html/> for full copyright and licensing details. -->
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.package.form.view</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <data>
+                 <xpath expr="//field[@name='move_line_ids_without_package']/.." position="inside">
+                    <group string='Packages'>
+                       <field name="package_ids"
+                         context="{'tree_view_ref':
+                         'odoo_shipping_service_apps.view_quant_package_tree'}"  nolabel="1"/>
+                    </group>
+               </xpath>
+               <xpath expr="//field[@name='move_line_ids_without_package']/.." position="inside">
+                  <group string='Packages'>
+                     <field name="package_ids"
+                       context="{'tree_view_ref':
+                       'odoo_shipping_service_apps.view_quant_package_tree'}"  nolabel="1"/>
+                  </group>
+             </xpath>
+            </data>
+          </field>
+      </record>
+
+     <record id="view_picking_withlabel_form_view" model="ir.ui.view">
+        <field name="name">delivery.stock.picking_withlabel.form.view</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form"/>
+        <field name="arch" type="xml">
+          <data>
+           <field name="delivery_type" position="attributes">
+              <attribute name='invisible'>False</attribute>
+           </field>
+           <xpath expr="//div[@name='tracking']" position="after">
+              <field name="label_genrated" />
+            </xpath>
+           </data>
+          </field> 
+    </record>
+     <record id="vpicktree_inherited_wk" model="ir.ui.view">
+        <field name="name">stock.picking.tree.shipping</field>
+        <field name="model">stock.picking</field>
+         <field name="inherit_id" ref="stock.vpicktree"/>
+        <field name="arch" type="xml">
+          <field name="partner_id" position="after">
+            <field name="label_genrated" invisible="context.get('label_genrated', True)!= 'True'"/>
+            <field name="carrier_tracking_ref" invisible="context.get('label_genrated', True)!= 'True'"/>
+            <field name="carrier_id" invisible="context.get('label_genrated', True)!= 'True'"/>
+            <field name="delivery_type" invisible="context.get('label_genrated', True)!= 'True'"/>
+        </field>
+      </field>
+    </record>
+
+    <record id="view_picking_shipping_search" model="ir.ui.view">
+        <field name="name">stock.picking.shipping.search</field>
+        <field name="model">stock.picking</field>
+         <field name="inherit_id" ref="stock.view_picking_internal_search"/>
+        <field name="arch" type="xml">
+            <filter  name="draft"  position='after'>
+
+              <filter icon="terp-check" name="label_genrated" string="Label Genrated" domain="[('label_genrated','!=',False)]" help="Label Already Generated"/>
+              <filter icon="terp-check" name="label_nedded" string="Label Need To Be Generate" domain="[('carrier_tracking_ref','=',False),('delivery_type','not in', ['fixed', 'base_on_rule'])]" help="Label Have To Generate"/>
+            </filter>
+          </field>
+        </record>
+     <record id="action_picking_tree_all" model="ir.actions.act_window">
+        <field name="name">All External Shipment</field>
+        <field name="res_model">stock.picking</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form,calendar</field>
+        <field name="view_id" ref="vpicktree_inherited_wk"/>
+        <field name="context">{ 'label_genrated': 'True',    } </field>
+        <field name="domain">[('carrier_id','!=',False),('delivery_type','not in', ('fixed', 'base_on_rule'))]</field>
+         <field name="search_view_id" ref="view_picking_shipping_search"/>
+    </record>
+            <menuitem
+        action="action_picking_tree_all"
+        id="menu_action_picking_shipment_type_form"
+        parent="stock.menu_stock_warehouse_mgmt" sequence="10"/>
+</odoo>

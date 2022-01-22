@@ -1,0 +1,86 @@
+<odoo>
+    <record id="sh_shopify_configuration_form" model='ir.ui.view'>
+        <field name="name">sh.shopify.configuration.form</field>
+        <field name="model">sh.shopify.configuration</field>
+        <field name="arch" type="xml">
+            <form string="shopify Credentials">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="open_all_contact_queue" icon="fa-address-book">
+                            <field name="total_count_contact" widget="statinfo" string="Contacts Queue"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="open_all_product_queue" icon="fa-cube">
+                            <field name="total_count_product" widget="statinfo" string="Product Queue"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="open_all_order_queue" icon="fa-usd">
+                            <field name="total_count_orders" widget="statinfo" string="Orders Queue"/>
+                        </button>
+                    </div>
+                    <h1>
+                        <field name="name" default_focus="1" placeholder="Name" required="1"/>
+                    </h1>
+                    <group name="creds">
+                        <group>
+                            <field name="sh_api_key" required="1" password="1"/>
+                            <field name="sh_password" required="1" password="1"/>
+                            <field name="sh_secret_key" required="1" password="1"/>
+                            <field name="sh_host_name" required="1" password="1"/>
+                            <field name="company_id"/>
+                        </group>                        
+                    </group>
+                    <h2 class="text-primary mb-2">Log History</h2>
+                    <field name="shopify_logger_id" readonly="1">
+                        <tree decoration-success="state=='success'" decoration-danger="state=='error'">
+                            <field name="type_"/>
+                            <field name="state"/>
+                            <field name="datetime"/>
+                            <field name="error"/>
+                            <!-- <button type="object" name="send_logger" class="btn btn-primary" string="View More" attrs="{'invisible' : [('state', '=', 'success')]}"/> -->
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_shopify_configuration_kanban_view" model="ir.ui.view">
+        <field name="name">sh.shopify.configuration.kanban.view</field>
+        <field name="model">sh.shopify.configuration</field>
+        <field name="arch" type="xml">
+            <kanban class="o_res_partner_kanban" sample="1">                
+                <field name="name"/>
+                <field name="company_id"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban">
+                            <div class="oe_kanban_details d-flex flex-column">
+                                <strong class="o_kanban_record_title oe_partner_heading">                                    
+                                    <h2>
+                                        <field name="name"/>
+                                    </h2>
+                                    <field name="company_id"/>
+                                </strong>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="sh_shopify_configurtion_action" model="ir.actions.act_window">
+        <field name="name">Shopify</field>
+        <field name="res_model">sh.shopify.configuration</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Shopify Credentials
+            </p>
+        </field>
+    </record>
+
+    <menuitem name="Shopify" id="sh_shopify_configuration_root" groups="sh_shopify_connector.sh_shopify_configuration_manager"/>
+
+    <menuitem name="Credentials" action="sh_shopify_configurtion_action" parent="sh_shopify_configuration_root" id="sh_shopify_credentials" sequence="1"/>
+</odoo>
