@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_delivery_carrier_dhl_form_view" model="ir.ui.view">
+        <field name="name">delivery.carrier.DHL.form.view</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='destination']" position='before'>
+                <page string="DHL Packet Configuration" name="dhl_packet_configuration"
+                      attrs="{'invisible': [('delivery_type', '!=', 'dhl_paket')]}">
+                    <group>
+                        <group>
+                            <field name="services_name"
+                                   attrs="{'required':[('delivery_type', '==', 'dhl_paket')]}"/>
+                            <field name="shipment_handling_type"
+                                   attrs="{'required':[('delivery_type', '==', 'dhl_paket'),('services_name','in',['V06PAK','V06WZ','V06TG'])],'invisible':[('services_name', 'not in',['V06PAK','V06WZ','V06TG'])]}"/>
+                            <field name="shipment_endorsement_type"
+                                   attrs="{'required':[('delivery_type', '==', 'dhl_paket'),('services_name','in',['V06PAK','V06WZ','V06TG'])],'invisible':[('services_name', 'not in',['V06PAK','V06WZ','V06TG'])]}"/>
+                            <field name="dhl_ekp_no" placeholder="EKP Number"
+                                       attrs="{'required':[('delivery_type', '==', 'dhl_paket')]}"/>
+                            <field name="dhl_procedure_no" class="oe_inline"
+                                       placeholder="Procedure Number"
+                                       attrs="{'required':[('delivery_type', '==', 'dhl_paket')]}"/>
+
+                            <field name="dhl_participation_no" class="oe_inline"
+                                       placeholder="Participation Number"
+                                       attrs="{'required':[('delivery_type', '==', 'dhl_paket')]}"/>
+
+                        </group>
+                        <group>
+                            <field name="shipment_is_out_of_country"/>
+                            <field name="exclude_country_groups"
+                                   attrs="{'invisible':[('shipment_is_out_of_country', '!=', True)]}"
+                                   widget="many2many_tags"/>
+                            <field name="export_type"
+                                   attrs="{'required':[('shipment_is_out_of_country', '==', True),('delivery_type', '==', 'dhl_paket')],'invisible':[('shipment_is_out_of_country', '!=', True)]}"/>
+                            <field name="terms_of_trade"
+                                   attrs="{'required':[('shipment_is_out_of_country', '==', True),('delivery_type', '==', 'dhl_paket')],'invisible':[('shipment_is_out_of_country', '!=', True)]}"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

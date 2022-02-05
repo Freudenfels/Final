@@ -1,0 +1,95 @@
+<odoo>
+    <data>
+        <record id="view_company_form_view" model="ir.ui.view">
+            <field name="name">company.form.view</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[last()]" position="after">
+                    <page string="DHL Paket Configuration">
+                        <group>
+                            <field name="use_dhl_paket_shipping_provider"/>
+                        </group>
+                        <group attrs="{'invisible': [('use_dhl_paket_shipping_provider', '!=', True)]}">
+                            <field name="userid"
+                                   attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}"/>
+                            <field name="password"
+                                   attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}"/>
+                            <field name="http_userid"
+                                   attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}"/>
+                            <field name="http_password"
+                                   attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}"/>
+                            <field name="dhl_ekp_no"
+                                   attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}"/>
+                            <field name="tracking_link" />
+                        </group>
+                    </page>
+                    
+                </xpath>
+                
+                <xpath expr="//page[last()]" position="after"> 
+                    <page name="address_configuration" string="Address Configuration" attrs="{'invisible': [('use_dhl_paket_shipping_provider', '!=', True)]}">
+                        <group>
+                            <group string="Street">
+                                <field name="dhl_street_no" width="50"
+                                       attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}" widget="selection"
+                                       placeholder="Select street number value"/>
+                            </group>
+                            <group string="Packstation">
+                                <field name="dhl_packstation_postnumber" width="50"
+                                       attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}" widget="selection"
+                                       placeholder="Select Postnumber value"/>
+                                <field name="dhl_packstation_prefix" width="50"
+                                       attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}"
+                                       placeholder="Packstation Prefix"/>
+                                <field name="dhl_packstation_no" width="50"
+                                       attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}" widget="selection"
+                                       placeholder="Select value of packstation number"/>
+                            </group>
+                            <group string="Filiale">
+                                <field name="dhl_filiale_postnumber" width="50"
+                                       attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}" widget="selection"
+                                       placeholder="Select Postnumber value"/>
+                                <field name="dhl_filiale_prefix" width="50"
+                                       attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}"
+                                       placeholder="Postfiliale Prefix"/>
+                                <field name="dhl_filiale_no" width="50"
+                                       attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}" widget="selection"
+                                       placeholder="Select value of filiale number"/>
+                            </group>
+                            <group string="Parcelshop">
+                                <field name="dhl_parcelshop_prefix" width="50"
+                                       attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}"
+                                       placeholder="Parcelshop Prefix"/>
+                                <field name="dhl_parcelshop_no" width="50"
+                                       attrs="{'required':[('use_dhl_paket_shipping_provider','=',True)]}" widget="selection"
+                                       placeholder="Select value of parcelshop number"/>
+                            </group>
+                        </group>
+                    </page>
+                    
+                </xpath>
+            </field>
+        </record>
+        <!--		<record id="view_company_form_view_ept" model="ir.ui.view">-->
+        <!--			<field name="name">company.form.view.ept</field>-->
+        <!--			<field name="model">res.company</field>-->
+        <!--			<field name="inherit_id" ref="base.view_company_form" />-->
+        <!--			<field name="arch" type="xml">-->
+        <!--				<xpath expr="//sheet/notebook/page/group/group/div/field[@name='street2']" position='after'>-->
+        <!--						<field name="street_no" placeholder="Street No."/>-->
+        <!--				</xpath>-->
+        <!--			</field>-->
+        <!--		</record>-->
+        <!--	 	<record id="view_partner_form_view_ept" model="ir.ui.view">-->
+        <!--			<field name="name">Partner.form.view.ept</field>-->
+        <!--			<field name="model">res.partner</field>-->
+        <!--			<field name="inherit_id" ref="base.view_partner_form" />-->
+        <!--			<field name="arch" type="xml">-->
+        <!--				<xpath expr="//sheet/group/group/div/field[@name='street2']" position='after'>-->
+        <!--						<field name="street_no" placeholder="Street No."/>-->
+        <!--				</xpath>-->
+        <!--			</field>-->
+        <!--		</record> -->
+    </data>
+</odoo>
