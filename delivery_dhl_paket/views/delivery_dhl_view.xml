@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo><data>
+
+<record id="view_delivery_carrier_form_with_provider_dhl_de_paket" model="ir.ui.view">
+    <field name="name">delivery.carrier.form.provider.dhl.de.paket</field>
+    <field name="model">delivery.carrier</field>
+    <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='integration_level']" position="before">     
+        		  <field name="dhl_de_paket_shipping_cost" attrs="{'invisible': [('delivery_type', '!=', 'dhl_de_paket')]}">
+                  </field>
+        </xpath>
+        <xpath expr="//notebook/page[@name='destination']" position='before'>
+        	<page string="DHL Business Customer Configuration" attrs="{'invisible': [('delivery_type', '!=', 'dhl_de_paket')]}">
+	            <group  attrs="{'invisible': [('delivery_type', '!=', 'dhl_de_paket')]}">
+	                <group>
+	                    <field name="dhl_de_paket_test_user" attrs="{'invisible':[('prod_environment', '=', True)]}"/>
+	                    <field name="dhl_de_paket_test_signature" password="True" attrs="{'invisible':[('prod_environment', '=', True)]}"/>
+	                    <field name="dhl_de_paket_intraship_user" help="Used in Poduction Environment" attrs="{'invisible':[('prod_environment', '!=', True)]}"/>
+	                    <field name="dhl_de_paket_intraship_signature" password="True" help="Used in Poduction Environment" attrs="{'invisible':[('prod_environment', '!=', True)]}"/>
+	                    <field name="dhl_de_paket_account_number" attrs="{'required': [('delivery_type', '=', 'dhl_de_paket')]}"/>
+	                    <field name="dhl_de_paket_partner_no" attrs="{'required': [('delivery_type', '=', 'dhl_de_paket')]}"/>    
+			<!--
+	                    <field name="dhl_de_paket_region_code" attrs="{'required': [('delivery_type', '=', 'dhl_de_paket')]}"/>
+	                    -->
+	                </group>
+	                <group>
+	                    <field name="dhl_de_paket_product_code" attrs="{'required': [('delivery_type', '=', 'dhl_de_paket')]}"/>
+	                    <field name="dhl_de_paket_endorsement_type" attrs="{'required': [('delivery_type', '=', 'dhl_de_paket'),('dhl_de_paket_product_code','=','V53WPAK')]}"/>
+						<field name="dhl_de_paket_package_weight_unit" attrs="{'required': [('delivery_type', '=', 'dhl_de_paket')]}"/>
+	                    <field name="dhl_de_paket_dimension_unit" attrs="{'required': [('delivery_type', '=', 'dhl_de_paket')]}"/>
+						<field name="dhl_de_paket_default_packaging_id" attrs="{'required': [('delivery_type', '=', 'dhl_de_paket')]}"
+							   domain="[('package_carrier_type', '=', 'dhl_de_paket')]"/>
+
+						<field name="dhl_de_paket_package_height" invisible="1"/>
+	                    <field name="dhl_de_paket_package_width" invisible="1"/>
+	                    <field name="dhl_de_paket_package_length" invisible="1"/>
+			            <field name="dhl_de_paket_dutiable" invisible="1"/>
+						<field name="dhl_de_paket_label_response_type" attrs="{'required': [('delivery_type', '=', 'dhl_de_paket')]}"/>
+						<field name="dhl_de_paket_label_format" attrs="{'required': [('delivery_type', '=', 'dhl_de_paket')]}"/>
+	                    <!--
+	                    <field name="dhl_de_paket_package_depth" attrs="{'required': [('delivery_type', '=', 'dhl_de_paket')]}"/>
+	                    -->
+	                	
+	                </group>
+	                <group>
+						<field name="dhl_de_paket_developer_id" attrs="{'invisible':[('prod_environment', '=', True)]}"/>
+	                    <field name="dhl_de_paket_portal_password" password="True" attrs="{'invisible':[('prod_environment', '=', True)]}"/>
+	                	<field name="dhl_de_paket_application_id"  help="Used in Poduction Environment" attrs="{'invisible':[('prod_environment', '!=', True)]}"/>
+	                    <field name="dhl_de_paket_application_token" password="True" help="Used in Poduction Environment" attrs="{'invisible':[('prod_environment', '!=', True)]}"/>
+	                	
+	                </group>
+	                <group attrs="{'invisible':[('prod_environment', '!=', True)]}">
+	                <p class="oe_grey">
+                    Use the Application ID: <i><b>odoo_dhl_de_connector_2</b></i>
+                    and Application token: <i><b>qcgEAJg1CRmK0uHPlGK8TlZmOHknTS</b></i> for production
+                    </p></group>
+	            </group>
+            </page>
+        </xpath>
+    </field>
+</record>
+
+    	<record id="view_picking_withcarrier_out_form_inherit" model="ir.ui.view">
+            <field name="name">delivery.stock.picking_withcarrier.inherit</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form"/>
+            <field name="arch" type="xml">
+            	<button name="cancel_shipment" position="after">
+					<p class="oe_grey" >
+                    All the labels created will be listed in the messages log.
+                    </p>
+
+				</button>
+            </field>
+        </record>
+
+	<record model="ir.ui.view" id="stock_package_type_delivery_form_dhl">
+		<field name="name">stock.package.type.form.delivery.dhl</field>
+		<field name="model">stock.package.type</field>
+		<field name="inherit_id" ref="delivery.stock_package_type_form_delivery"/>
+		<field name="arch" type="xml">
+			<field name="shipper_package_code" position="after">
+				<field name="dhl_is_bulky"/>
+			</field>
+		</field>
+	</record>
+            
+</data></odoo>
