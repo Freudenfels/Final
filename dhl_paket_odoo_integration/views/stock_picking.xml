@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="view_stock_picking_dhl_paket" model="ir.ui.view">
+            <field name="name">stock.picking.dhl.paket</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='delivery_type']" position="after">
+                    <field name="recipient_addess_type"
+                           attrs="{'invisible':[('delivery_type','!=','dhl_paket')]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

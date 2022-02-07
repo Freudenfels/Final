@@ -14,7 +14,7 @@ _logger = logging.getLogger(__name__)
 class DeliveryCarrier(models.Model):
     _inherit = "delivery.carrier"
 
-    delivery_type = fields.Selection(selection_add=[('dhl_paket', 'DHL Paket')], ondelete={'dhl_paket': 'set default'})
+    delivery_type = fields.Selection(selection_add=[('dhl_paket', 'DHL Paket')],ondelete={'dhl_paket': 'set default'})
     services_name = fields.Selection([("V01PAK", "V01PAK-DHL PAKET"),
                                       ("V06PAK", "V06PAK-DHL PAKET the same day"),
                                       ("V53WPAK", "V53WPAK-DHL PAKET International"),
@@ -66,7 +66,7 @@ class DeliveryCarrier(models.Model):
         help="participation number referred to as Partner ID in the web service.The participation is 2 numerical digits from 00 to 99 or alphanumerical digits from AA to ZZ.")
 
     def dhl_paket_rate_shipment(self, order):
-        return {'success': True, 'price': 0.0, 'error_message': False, 'ValidationError_message': False}
+        return {'success': True, 'price': 0.0, 'error_message': False, 'warning_message': False}
 
     @api.onchange("services_name")
     def onchange_services_name(self):
@@ -85,7 +85,7 @@ class DeliveryCarrier(models.Model):
         res_country_group = self.env['res.country.group']
         picking_company_id = picking.picking_type_id and picking.picking_type_id.warehouse_id and picking.picking_type_id.warehouse_id.partner_id
         shipment_order = etree.SubElement(shipment_order_node, "ShipmentOrder")
-        etree.SubElement(shipment_order, "sequenceNumber").text = "01"
+        etree.SubElement(shipment_order, "sequenceNumber").text = "1"
 
         shipment = etree.SubElement(shipment_order, "Shipment")
 
@@ -95,7 +95,7 @@ class DeliveryCarrier(models.Model):
         account_number = self.dhl_ekp_no + self.dhl_procedure_no + self.dhl_participation_no
 
         etree.SubElement(shipment_details, "cis:accountNumber").text = str(account_number)
-        etree.SubElement(shipment_details, "cis:customerReference").text = str("Good Luck")
+        # etree.SubElement(shipment_details, "cis:customerReference").text = str("Good Luck")
 
         etree.SubElement(shipment_details, "shipmentDate").text = time.strftime("%Y-%m-%d")
         shipment_item = etree.SubElement(shipment_details, "ShipmentItem")
@@ -151,9 +151,8 @@ class DeliveryCarrier(models.Model):
 
         address_detail = etree.SubElement(shipper_info, "Address")
         etree.SubElement(address_detail, "cis:streetName").text = str(picking_company_id.street)
-        etree.SubElement(address_detail, "cis:streetNumber").text = str(picking_company_id.street_no if picking_company_id.street_no else picking_company_id.street2)
-        etree.SubElement(address_detail, "cis:addressAddition").text = str(
-            picking_company_id.street2 if picking_company_id.street2 else "")
+        etree.SubElement(address_detail, "cis:streetNumber").text = str(picking_company_id.street_no if picking_company_id.street_no else picking_company_id.street2 or '')
+        etree.SubElement(address_detail, "cis:addressAddition").text =  ""
         etree.SubElement(address_detail, "cis:zip").text = str(picking_company_id.zip)
         etree.SubElement(address_detail, "cis:city").text = str(picking_company_id.city)
         origin_node = etree.SubElement(address_detail, "cis:Origin")
@@ -164,7 +163,7 @@ class DeliveryCarrier(models.Model):
         if picking_company_id.phone:
             etree.SubElement(communication_node, "cis:phone").text = str(picking_company_id.phone)
 
-        if to_address:
+        if to_address and picking.picking_type_id:
             receiver_info = etree.SubElement(shipment, "Receiver")
             etree.SubElement(receiver_info, "cis:name1").text = str(to_address.name)
             communication = etree.SubElement(receiver_info, "Communication")
@@ -174,10 +173,10 @@ class DeliveryCarrier(models.Model):
                 etree.SubElement(communication, "cis:email").text = str(to_address.email)
             address_info = etree.SubElement(receiver_info, "Address")
 
-            # if (to_address.name2 and self.company_id.dhl_recipient_add_method == 'dhl_street'):
-            #     etree.SubElement(address_info, "cis:name2").text = str(to_address.name)
-            # if to_address.name3:
-            #     etree.SubElement(address_info, "cis:name3").text = str(to_address.name3 or "")
+            if (to_address.name and picking.recipient_addess_type == 'dhl_street'):
+                etree.SubElement(address_info, "cis:name2").text = ""
+            if to_address.name:
+                etree.SubElement(address_info, "cis:name3").text = ""
             etree.SubElement(address_info, "cis:streetName").text = str(to_address.street)
             etree.SubElement(address_info, "cis:streetNumber").text = str(to_address.street_no or to_address.street2)
             etree.SubElement(address_info, "cis:zip").text = str(to_address.zip)
@@ -187,87 +186,86 @@ class DeliveryCarrier(models.Model):
             etree.SubElement(origin, "cis:countryISOCode").text = str(
                 to_address.country_id and to_address.country_id.code)
 
-            # if picking.dhl_recipient_add_method == 'dhl_packstation':
+            if picking.recipient_addess_type == 'dhl_packstation':
+
+                packstation_detail = etree.SubElement(receiver_info, "Packstation")
+                etree.SubElement(packstation_detail, "cis:postNumber").text = str(to_address.post_no)
+                if to_address.prefix in to_address.street_no:
+                    pack_no = to_address.street_no
+                    pack_no = pack_no.replace(to_address.prefix, "")
+                    pack_no = pack_no.replace(" ", "")
+                    etree.SubElement(packstation_detail, "cis:packstationNumber").text = str(
+                        pack_no if pack_no else "")
+
+                else:
+                    etree.SubElement(packstation_detail, "cis:packstationNumber").text = str(to_address.street_no or "")
+                etree.SubElement(packstation_detail, "cis:zip").text = str(to_address.zip)
+                etree.SubElement(packstation_detail, "cis:city").text = str(to_address.city)
+                packstation_origin = etree.SubElement(packstation_detail, "cis:Origin")
+                etree.SubElement(packstation_origin, "cis:country").text = ""
+                etree.SubElement(packstation_origin, "cis:countryISOCode").text = str(
+                    (to_address.country_id and to_address.country_id.code))
+
+            if picking.recipient_addess_type == 'dhl_filiale':
+                postfiliale_detail = etree.SubElement(receiver_info, "Postfiliale")
+
+                if to_address.prefix in to_address.street_no:
+                    postfiliale_no = to_address.street_no
+                    postfiliale_no = postfiliale_no.replace(to_address.prefix, "")
+                    postfiliale_no = postfiliale_no.replace(" ", "")
+                    etree.SubElement(postfiliale_detail, "cis:postfilialNumber").text = str(
+                        postfiliale_no if postfiliale_no else "")
+                else:
+                    etree.SubElement(postfiliale_detail, "cis:postfilialNumber").text = str(to_address.street_no or "")
+
+                etree.SubElement(postfiliale_detail, "cis:postNumber").text = str(to_address.zip)
+                etree.SubElement(postfiliale_detail, "cis:zip").text = str(to_address.zip)
+                etree.SubElement(postfiliale_detail, "cis:city").text = str(to_address.city)
+                postfiliale_origin = etree.SubElement(postfiliale_detail, "cis:Origin")
+                etree.SubElement(postfiliale_origin, "cis:country").text = ""
+                etree.SubElement(postfiliale_origin, "cis:countryISOCode").text = str(
+                    (to_address.country_id and to_address.country_id.code) or "")
+
+            if picking.recipient_addess_type == 'dhl_parcelshop':
+                parcelshop_detail = etree.SubElement(receiver_info, "ParcelShop")
+
+                if to_address.prefix in to_address.street_no:
+                    parcelshop_no = to_address.street_no
+                    parcelshop_no = parcelshop_no.replace(to_address.prefix, "")
+                    parcelshop_no = parcelshop_no.replace(" ", "")
+                    etree.SubElement(parcelshop_detail, "cis:parcelShopNumber").text = str(
+                        parcelshop_no if parcelshop_no else "")
+                else:
+                    etree.SubElement(parcelshop_detail, "cis:parcelShopNumber").text = str(to_address.street_no or "")
+
+                etree.SubElement(parcelshop_detail, "cis:zip").text = str(to_address.zip)
+                etree.SubElement(parcelshop_detail, "cis:city").text = str(to_address.city)
+                parcelshop_origin = etree.SubElement(parcelshop_detail, "cis:Origin")
+                etree.SubElement(parcelshop_origin, "cis:country").text = ""
+                etree.SubElement(parcelshop_origin, "cis:countryISOCode").text = str(
+                    (to_address.country_id and to_address.country_id.code) or "")
+            # if picking.picking_type_id:
+            #     pp = picking.partner_id
+            #     receiver_info = etree.SubElement(shipment, "Receiver")
+            #     etree.SubElement(receiver_info, "cis:name1").text = str(pp.name)
+            #     communication = etree.SubElement(receiver_info, "Communication")
+            #     if pp.phone:
+            #         etree.SubElement(communication, "cis:phone").text = str(pp.phone)
+            #     if pp.email:
+            #         etree.SubElement(communication, "cis:email").text = str(pp.email)
+            #     address_info = etree.SubElement(receiver_info, "Address")
             #
-            #     packstation_detail = etree.SubElement(receiver_info, "Packstation")
-            #     etree.SubElement(packstation_detail, "cis:postNumber").text = str(to_address.post_no)
-            #     if to_address.prefix in to_address.street_no:
-            #         pack_no = to_address.street_no
-            #         pack_no = pack_no.replace(to_address.prefix, "")
-            #         pack_no = pack_no.replace(" ", "")
-            #         etree.SubElement(packstation_detail, "cis:packstationNumber").text = str(
-            #             pack_no if pack_no else "")
-            #
-            #
-            #     else:
-            #         etree.SubElement(packstation_detail, "cis:packstationNumber").text = str(to_address.street_no or "")
-            #     etree.SubElement(packstation_detail, "cis:zip").text = str(to_address.zip)
-            #     etree.SubElement(packstation_detail, "cis:city").text = str(to_address.city)
-            #     packstation_origin = etree.SubElement(packstation_detail, "cis:Origin")
-            #     etree.SubElement(packstation_origin, "cis:country").text = ""
-            #     etree.SubElement(packstation_origin, "cis:countryISOCode").text = str(
-            #         (to_address.country_id and to_address.country_id.code))
-
-            # if to_address.dhl_recipient_add_method == 'dhl_filiale' or picking.batch_id.dhl_recipient_add_method == 'dhl_filiale':
-            postfiliale_detail = etree.SubElement(receiver_info, "Postfiliale")
-
-            # if to_address.prefix in to_address.street_no:
-            #     postfiliale_no = to_address.street_no
-            #     postfiliale_no = postfiliale_no.replace(to_address.prefix, "")
-            #     postfiliale_no = postfiliale_no.replace(" ", "")
-            #     etree.SubElement(postfiliale_detail, "cis:postfilialNumber").text = str(
-            #         postfiliale_no if postfiliale_no else "")
-            # else:
-            #     etree.SubElement(postfiliale_detail, "cis:postfilialNumber").text = str(to_address.street_no or "")
-
-            # etree.SubElement(postfiliale_detail, "cis:postNumber").text = str(to_address.post_no)
-            etree.SubElement(postfiliale_detail, "cis:zip").text = str(to_address.zip)
-            etree.SubElement(postfiliale_detail, "cis:city").text = str(to_address.city)
-            postfiliale_origin = etree.SubElement(postfiliale_detail, "cis:Origin")
-            etree.SubElement(postfiliale_origin, "cis:country").text = ""
-            etree.SubElement(postfiliale_origin, "cis:countryISOCode").text = str(
-                (to_address.country_id and to_address.country_id.code) or "")
-
-            # if to_address.dhl_recipient_add_method == 'dhl_parcelshop' or picking.batch_id.dhl_recipient_add_method == 'dhl_parcelshop':
-            parcelshop_detail = etree.SubElement(receiver_info, "ParcelShop")
-
-            # if to_address.prefix in to_address.street_no:
-            #     parcelshop_no = to_address.street_no
-            #     parcelshop_no = parcelshop_no.replace(to_address.prefix, "")
-            #     parcelshop_no = parcelshop_no.replace(" ", "")
-            #     etree.SubElement(parcelshop_detail, "cis:parcelShopNumber").text = str(
-            #         parcelshop_no if parcelshop_no else "")
-            # else:
-            #     etree.SubElement(parcelshop_detail, "cis:parcelShopNumber").text = str(to_address.street_no or "")
-
-            etree.SubElement(parcelshop_detail, "cis:zip").text = str(to_address.zip)
-            etree.SubElement(parcelshop_detail, "cis:city").text = str(to_address.city)
-            parcelshop_origin = etree.SubElement(parcelshop_detail, "cis:Origin")
-            etree.SubElement(parcelshop_origin, "cis:country").text = ""
-            etree.SubElement(parcelshop_origin, "cis:countryISOCode").text = str(
-                (to_address.country_id and to_address.country_id.code) or "")
-            if picking.picking_type_id:
-                pp = picking.partner_id
-                receiver_info = etree.SubElement(shipment, "Receiver")
-                etree.SubElement(receiver_info, "cis:name1").text = str(pp.name)
-                communication = etree.SubElement(receiver_info, "Communication")
-                if pp.phone:
-                    etree.SubElement(communication, "cis:phone").text = str(pp.phone)
-                if pp.email:
-                    etree.SubElement(communication, "cis:email").text = str(pp.email)
-                address_info = etree.SubElement(receiver_info, "Address")
-
-                # if pp.street2 and picking.batch_id.dhl_recipient_add_method == 'dhl_street':
-                #     etree.SubElement(address_info, "cis:name2").text = str(pp.street2)
-                if pp.street_no:
-                    etree.SubElement(address_info, "cis:name3").text = str(pp.street_no or "")
-                etree.SubElement(address_info, "cis:streetName").text = str(pp.street)
-                etree.SubElement(address_info, "cis:streetNumber").text = str(pp.street or "")
-                etree.SubElement(address_info, "cis:zip").text = str(pp.zip)
-                etree.SubElement(address_info, "cis:city").text = str(pp.city)
-                origin = etree.SubElement(address_info, "cis:Origin")
-                etree.SubElement(origin, "cis:country").text = ""
-                etree.SubElement(origin, "cis:countryISOCode").text = str(pp.country_id and pp.country_id.code)
+            #     # if pp.street2 and picking.batch_id.dhl_recipient_add_method == 'dhl_street':
+            #     #     etree.SubElement(address_info, "cis:name2").text = str(pp.street2)
+            #     if pp.street_no:
+            #         etree.SubElement(address_info, "cis:name3").text = str(pp.street_no or "")
+            #     etree.SubElement(address_info, "cis:streetName").text = str(pp.street)
+            #     etree.SubElement(address_info, "cis:streetNumber").text = str(pp.street or "")
+            #     etree.SubElement(address_info, "cis:zip").text = str(pp.zip)
+            #     etree.SubElement(address_info, "cis:city").text = str(pp.city)
+            #     origin = etree.SubElement(address_info, "cis:Origin")
+            #     etree.SubElement(origin, "cis:country").text = ""
+            #     etree.SubElement(origin, "cis:countryISOCode").text = str(pp.country_id and pp.country_id.code)
 
                 # if picking.batch_id.dhl_recipient_add_method == 'dhl_packstation':
                 #
@@ -377,14 +375,14 @@ class DeliveryCarrier(models.Model):
             root_node = etree.Element("soapenv:Envelope")
             root_node.attrib['xmlns:soapenv'] = "http://schemas.xmlsoap.org/soap/envelope/"
             root_node.attrib['xmlns:cis'] = "http://dhl.de/webservice/cisbase"
-            root_node.attrib['xmlns:bus'] = "http://dhl.de/webservices/businesscustomershipping"
+            root_node.attrib['xmlns:bus'] = "http://dhl.de/webservices/businesscustomershipping/3.0"
 
             header_node = etree.SubElement(root_node, "soapenv:Header")
             authentification_node = etree.SubElement(header_node, "cis:Authentification")
             etree.SubElement(authentification_node, "cis:user").text = str(
-                self.company_id.http_userid)
+                self.company_id.userid)
             etree.SubElement(authentification_node, "cis:signature").text = str(
-                self.company_id.http_password)
+                self.company_id.password)
 
             shipment_body_node = etree.SubElement(root_node, "soapenv:Body")
             shipment_order_node = etree.SubElement(shipment_body_node, "bus:CreateShipmentOrderRequest")
@@ -406,8 +404,8 @@ class DeliveryCarrier(models.Model):
                 _logger.info("DHL Request URL : %s\n DHL Request Header: %s\n DHL Request Data : %s " % (
                 url, headers, etree.tostring(root_node)))
                 result = requests.post(url=url, data=etree.tostring(root_node), headers=headers,
-                                       auth=HTTPBasicAuth(str(self.company_id.userid),
-                                                          str(self.company_id.password)))
+                                       auth=HTTPBasicAuth(str(self.company_id.http_userid),
+                                                          str(self.company_id.http_password)))
             except Exception as e:
                 raise ValidationError(_(e))
             if result.status_code != 200:
@@ -427,13 +425,17 @@ class DeliveryCarrier(models.Model):
                     if isinstance(creation_detail, dict):
                         creation_detail = [creation_detail]
                     for cdetail in creation_detail:
-                        tracking_no = cdetail.get('LabelData', {}).get('shipmentNumber')
+                        exportlabeldata = cdetail.get('exportLabelData')
 
-                        binary_data = cdetail.get('LabelData', {}).get('labelData')
+                        tracking_no = cdetail.get('shipmentNumber')
 
-                        exportlabeldata = cdetail.get('LabelData', {}).get('exportLabelData')
+                        label_url_response = requests.get(cdetail.get('LabelData', {}).get('labelUrl'), stream=True,
+                                                          verify=False, timeout=10)
 
-                        label_binary_data = binascii.a2b_base64(str(binary_data))
+                        binary_data = {}
+                        if label_url_response.status_code == 200:
+                            binary_data = label_url_response.content
+                        label_binary_data = binary_data
 
                         message_ept = (
                                 _("Shipment created!<br/> <b>Shipment Tracking Number : </b>%s") % (tracking_no))
@@ -535,7 +537,7 @@ class DeliveryCarrier(models.Model):
             root_node = etree.Element("soapenv:Envelope")
             root_node.attrib['xmlns:soapenv'] = "http://schemas.xmlsoap.org/soap/envelope/"
             root_node.attrib['xmlns:cis'] = "http://dhl.de/webservice/cisbase"
-            root_node.attrib['xmlns:bus'] = "http://dhl.de/webservices/businesscustomershipping"
+            root_node.attrib['xmlns:bus'] = "http://dhl.de/webservices/businesscustomershipping/3.0"
 
             header_node = etree.SubElement(root_node, "soapenv:Header")
             authentification_node = etree.SubElement(header_node, "cis:Authentification")
